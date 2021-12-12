@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="name">Saurabh Kesharwani</h1>
+    <button id="vow">Calculate vowel</button><br><br><br>
+    <div id="Message"></div>
+    <button>
+        <a href="https://github.com/Saurabh2911/hackathon"> Github Repo </a>
+        </button>
+
+    <script>
+        Button = document.getElementById("vow")
+        const name = document.getElementById("name")
+        Message = document.getElementById("Message")
+
+        Button.addEventListener("click", solve)
+        
+        function solve()
+        {
+            str=name.innerText
+            n=str.length 
+            res="Vowels are: "
+            for( i=0;i<n;i++)
+            {   
+                if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u')
+                 {
+                     res +=str[i]
+                     res +=","
+                 }
+                 if(str[i]=='A' || str[i]=='B' || str[i]=='C' || str[i]=='D' || str[i]=='E')
+                 {
+                     res +=str[i]
+                     res +=","
+                 }
+            }
+            Message.innerText=res;
+        }
+        
+
+    </script>
+</body>
+</html>
