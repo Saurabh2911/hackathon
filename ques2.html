@@ -1,0 +1,24 @@
+//Done on ONE Compiler
+
+function factorial(n) {
+    if (n == 0) return 1;
+    return n * factorial(n - 1);
+  }
+  
+  //Take n=8  
+  n=8
+  var f=factorial(n)
+  
+  console.log(`Factorial Of ${n} is ${f}`);
+  
+  c=0;
+  while(f!=0)
+  {
+    if(f%10==0)
+      c++;
+    
+    
+    f=parseInt(f/10);
+  }
+  
+  console.log(`No of Zero in factorial ${c}`)
