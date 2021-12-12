@@ -1,0 +1,29 @@
+// Take two sorted array and merge them together so that the resultant array is also sorted
+
+
+
+var arr1=[1,2,3,4,5]
+var arr2=[2,4,6,8,10]
+var arr3=[]
+
+var n1=arr1.length
+var n2=arr2.length
+
+ i = 0, j = 0, k = 0
+        while (i<n1 && j <n2)
+        {
+  
+            if (arr1[i] < arr2[j])
+                arr3[k++] = arr1[i++];
+            else
+                arr3[k++] = arr2[j++];
+        }
+
+        while (i < n1)
+            arr3[k++] = arr1[i++];
+ 
+        while (j < n2)
+            arr3[k++] = arr2[j++];
+            
+for(k of arr3)
+ console.log(k);
