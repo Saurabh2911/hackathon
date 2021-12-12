@@ -1,0 +1,18 @@
+//Take a string and remove adjacent duplicate characters of string using recursion.(two continuous two characters should be same) 
+
+
+
+function removeDuplicates(inp)
+{
+    if(inp.length<=1)
+            return inp;
+        if(inp[0]==inp[1])
+            return removeDuplicates(inp.substring(1));
+        else
+            return inp[0] +
+            removeDuplicates(inp.substring(1));
+}
+ 
+let S1 = "hyyhellohyyhello";
+console.log(removeDuplicates(S1));
+ 
